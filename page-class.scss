@@ -1,0 +1,326 @@
+
+ @import url('https://rsms.me/inter/inter.css');
+ @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css');
+
+
+body{
+    background-color: white;
+    transition: background-color 0.2s linear;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body.dark{
+    background-color: #212121;
+}
+
+
+:root {
+  --color-light: white;
+  --color-dark: #212121;
+  --color-signal: #212121;
+  
+  --color-background: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-accent: var(--color-signal);
+  
+  --size-bezel: .5rem;
+  --size-radius: 4px;
+  
+  line-height: 1.4;
+  
+  font-family: 'Inter', sans-serif;
+  font-size: calc(.6rem + .4vw);
+  color: var(--color-text);
+  background: var(--color-background);
+  font-weight: 300;
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+}
+
+mark {
+  background: var(--color-accent);
+  color: var(--color-text);
+  font-weight: bold;
+  padding: 0 0.2em;
+}
+
+.card {
+  background: var(--color-background);
+  margin-top: calc(4 * var(--size-bezel));
+  border-radius: var(--size-radius);
+  border: 3px solid var(--color-shadow, currentColor);
+
+  
+  &--inverted {
+    --color-background: var(--color-dark);
+    color: var(--color-light);
+    --color-shadow: var(--color-accent);
+  }
+  
+  &--accent {
+    --color-background: var(--color-signal);
+    --color-accent: var(--color-light);
+    color: var(--color-dark);
+  }
+  
+  *:first-child {
+    margin-top: 0;
+  }
+}
+
+strong{
+    margin: 15px 10px 10px 15px;
+    font-size: 45px;
+    color: #dc3545;
+    &__home{
+        margin: none;
+    }
+}
+
+ strong__projects{
+     font-size: 45px;
+    color: #dc3545;
+  margin: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+    }
+
+.l-design-widht {
+  max-width: 40rem;
+  padding: 1rem;
+}
+
+.input {
+  position: relative;
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+
+  
+  &__label {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    padding: calc(var(--size-bezel) * 1) calc(var(--size-bezel) * 0.1);
+    margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * 2);
+    background: pink;
+    white-space: nowrap;
+    transform: translate(0, 0);
+    transform-origin: 0 0;
+    background: var(--color-background);
+    transition: transform 150ms ease-in;
+    font-weight: bold;
+    line-height: 1.2;
+    border: none;
+    width: 70px;
+    height: 30px;
+
+  }
+  &__message{
+        height: 150px;
+    }
+
+  &__field {
+
+    display: block;
+    width: 100%;
+    border: 3px solid currentColor;
+    padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+    color: currentColor;
+
+    border-radius: var(--size-radius);
+    
+    &:focus,
+    &:not(:placeholder-shown) {
+      & + .input__label {
+        transform: translate(.25rem, -65%) scale(.8);
+        color: var(--color-accent);
+      }
+    }
+  }
+}
+
+
+.button-group {
+  margin-top: calc(var(--size-bezel) * 2.5);
+}
+
+.button-form{
+    margin-top: 10px;
+}
+
+button {
+  color: currentColor;
+  padding: var(--size-bezel) calc(var(--size-bezel) * 2);
+  background: var(--color-accent);
+  border: none;
+  border-radius: var(--size-radius);
+  font-weight: 900;
+  
+  &[type=reset]{
+    background: var(--color-background);
+    font-weight: 200;
+  }
+
+}
+
+button + button {
+  margin-left: calc(var(--size-bezel) * 2);
+}
+
+.icon {
+  display: inline-block;
+  width: 1em; height: 1em;
+  margin-right: .5em;
+}
+
+.hidden {
+  display: none;
+}
+
+ 
+.icons {
+      Width: 28px;
+      Height: 28px;
+      border-radius: 50%;
+      background-color: white;
+    }
+ .rounded-switcher {
+    width: 40px;
+    border-radius: 50%;
+    margin: 10px;
+  }
+
+  #arrowIcon {
+     Width: 70px;
+    Height: 70px;
+    border-radius: 80%;
+    position: fixed;
+    right: 35px;
+    bottom: 70px;
+    color: #dc3545; 
+    z-index: 9999;
+    font-size: 55px;
+} 
+
+   .isShownArrow {
+     
+      opacity: 1;
+      transition: 0.5s;
+
+
+      &__hide {
+      opacity: 0;
+      }
+    }
+      .photoAbout {
+      Width: 450px;
+      border-radius: 10%;
+      box-shadow: 4px 4px grey;
+      background-color: white;
+      margin: 25px 0 25px;
+    }
+
+    .photo-container {
+      display: flex;
+      justify-content: center;
+    }
+
+
+
+.pFotter{
+    font-size: 16px; 
+    color: #dc3545; 
+    text-align: center
+}
+
+
+
+///button
+
+span{
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin-top: 15px;
+  perspective: 1000px;
+}
+span a{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .75s;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+span a:before,
+span a:after{
+  position: absolute;
+  content: "SEND THE FORM";
+  height: 55px;
+  width: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+span a:before{
+  color: #dc3545;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+span a:after{
+  color: #000;
+  background: #dc3545;
+  transform: rotateX(90deg) translateZ(25px);
+}
+span a:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+
+.accordion-button:not(.collapsed) {
+    color:#dc3545;
+    background-color: white;
+    box-shadow: inset 0 calc(var(--bs-accordion-border-width) * -1) 0 var(--bs-accordion-border-color);
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color:#dc3545;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  transition: 1.5ms;
+  font-size: 14px;
+  color: azure;
+  background-color: rgb(255, 255, 255);
+  z-index: 999;
+  height: 40px;
+  border: 1px black solid;
+}
+
+.stickyNavFont {
+    font-size: 14px;
+  color: azure;
+}
